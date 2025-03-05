@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 2: Fast and Fitness Android App</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <style>
+
+       /* Header */
+    header {
+      background: linear-gradient(135deg, #1abc9c, #16a085);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem;
+      position: relative;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+      /* Basic Reset and Styling */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        text-align: center; /* Center all page text */
+      }
+
+      h2 {
+        margin-top: 40px;
+        font-size: 2em;
+        color: #333;
+        /* Slide-in animation for the heading */
+        animation: slideIn 1.5s ease-out forwards;
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      /* Container for project content */
+      .project-container {
+        width: 80%;
+        margin: 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 2s ease-out forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Project Image Styling */
+      .project-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        animation: zoomIn 1.5s ease-out forwards;
+      }
+
+      @keyframes zoomIn {
+        from {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      /* Repository Link Button Style */
+      .repo-link {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #1abc9c;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+      }
+
+      .repo-link:hover {
+        background: #1abc9c;
+      }
+
+      /* About Information Styling */
+      .about-info {
+        width: 80%;
+        margin: 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        animation: fadeIn 2s ease-out forwards;
+      }
+
+      .about-info h3 {
+        text-align: center;
+        color: #333;
+      }
+
+      .about-info p {
+        line-height: 1.6;
+        color: #555;
+        margin-top: 20px;
+      }
+
+      .about-info ul {
+        margin-top: 20px;
+        text-align: left;
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+
+      .about-info li {
+        margin-bottom: 10px;
+        color: #555;
+      }
+
+      footer {
+  background: #E5FCF5;
+  color: black;
+  text-align: center;
+  padding: 1rem 0;
+}
+    </style>
+  </head>
+  <body>
+    <header data-aos="fade-down">
+      <h2 style="color:white">Fast and Fitness Android App</h2>
+    </header>
+    
+    
+    <!-- Project Container with Image and Repository Link -->
+    <div class="project-container">
+      <img src="assets/images/fitness-app.jpg" alt="Fast and Fitness Android App" class="project-image" />
+      <br />
+      <a
+        class="repo-link"
+        href="https://github.com/mohammed558/Fast-and-Fitness-Android-App"
+        target="_blank"
+      >
+        View Repository on GitHub
+      </a>
+    </div>
+    
+    <!-- About Information Section -->
+    <div class="about-info">
+      <h3>About the Fast and Fitness Android App</h3>
+      <p>
+        This project is a robust Android application designed to help users achieve their fitness goals quickly and efficiently. With an intuitive and engaging interface, the app provides personalized workout routines, tracks progress in real time, and offers nutritional guidance to compliment an active lifestyle. The app is engineered for speed and performance, ensuring seamless navigation and rapid response to user input.
+      </p>
+      <p><strong>Key features include:</strong></p>
+      <ul>
+        <li><strong>Personalized Workout Plans:</strong> Delivers custom workout routines tailored to individual fitness levels and goals.</li>
+        <li><strong>Real-Time Progress Tracking:</strong> Monitors performance metrics and displays dynamic progress reports and statistics.</li>
+        <li><strong>User-Friendly Interface:</strong> Features a fast, intuitive, and responsive design optimized for mobile devices.</li>
+        <li><strong>Integration with Wearable Devices:</strong> Connects with fitness trackers and wearables to provide comprehensive health data.</li>
+        <li><strong>Nutrition and Diet Guidance:</strong> Offers dietary suggestions and meal planning to complement an active lifestyle.</li>
+      </ul>
+    </div>
+    <footer data-aos="fade-up">
+      <p>&copy; 2025 MOHAMMED. All Rights Reserved. Designed by Mohammed.</p>
+    </footer>
+  </body>
+</html>

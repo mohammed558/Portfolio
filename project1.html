@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 1: Dynamic Blog Update System with AI Integration</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <style>
+
+       /* Header */
+    header {
+      background: linear-gradient(135deg, #1abc9c, #16a085);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem;
+      position: relative;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+      /* Basic Reset and Styling */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        text-align: center; /* Center all page text */
+      }
+
+      h2 {
+        margin-top: 40px;
+        font-size: 2em;
+        color: #333;
+        /* Slide-in animation for the heading */
+        animation: slideIn 1.5s ease-out forwards;
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      /* Container for project content */
+      .project-container {
+        width: 80%;
+        margin: 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 2s ease-out forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Project Image Styling */
+      .project-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        animation: zoomIn 1.5s ease-out forwards;
+      }
+
+      @keyframes zoomIn {
+        from {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      /* Repository Link Button Style */
+      .repo-link {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #1abc9c;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+      }
+
+      .repo-link:hover {
+        background: #1abc9c;
+      }
+
+      /* About Information Styling */
+      .about-info {
+        width: 80%;
+        margin: 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        animation: fadeIn 2s ease-out forwards;
+      }
+
+      .about-info h3 {
+        text-align: center;
+        color: #333;
+      }
+
+      .about-info p {
+        line-height: 1.6;
+        color: #555;
+        margin-top: 20px;
+      }
+
+      .about-info ul {
+        margin-top: 20px;
+        text-align: left;
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+
+      .about-info li {
+        margin-bottom: 10px;
+        color: #555;
+      }
+      footer {
+  background: #E5FCF5;
+  color: black;
+  text-align: center;
+  padding: 1rem 0;
+}
+    </style>
+  </head>
+  <body> 
+    
+    <header data-aos="fade-down">
+    <h2 style="color:white">Dynamic Blog Update System with AI Integration</h2>
+  </header>
+   
+
+    <!-- Project Container with Image and Repository Link -->
+    <div class="project-container">
+      <img src="assets/images/blog-update.jpeg" alt="Dynamic Blog Update System" class="project-image" />
+      <br />
+      <a
+        class="repo-link"
+        href="https://github.com/mohammed558/Update_blog_with_Chatgpt"
+        target="_blank"
+      >
+        View Repository on GitHub
+      </a>
+    </div>
+    
+    <!-- About Information Section -->
+    <div class="about-info">
+      <h3>About the Dynamic Blog Update System with AI Integration</h3>
+      <p>
+        This project is a cutting-edge solution that dynamically updates blog content using artificial intelligence. It retrieves content from a database, sends it to an AI API for processing and enhancement, and then displays the updated content on the webpage in real time. This ensures that the blog always features the latest, contextually enriched content without manual intervention.
+      </p>
+      <p><strong>Key features include:</strong></p>
+      <ul>
+        <li><strong>Real-Time AI Integration:</strong> Processes and updates blog content instantly using AI, ensuring fresh and relevant posts.</li>
+        <li><strong>Data-Driven Content Updates:</strong> Automatically fetches and displays content from a central database.</li>
+        <li><strong>Scalable Architecture:</strong> Designed to handle large volumes of content and adapt to growing user demands.</li>
+        <li><strong>Responsive Design:</strong> Features a modern, user-friendly UI that works seamlessly on all devices.</li>
+        <li><strong>Robust Analytics:</strong> Provides detailed insights into content performance and user engagement.</li>
+      </ul>
+    </div>
+
+    <footer data-aos="fade-up">
+      <p>&copy; 2025 MOHAMMED. All Rights Reserved. Designed by Mohammed.</p>
+    </footer>
+  </body>
+</html>
