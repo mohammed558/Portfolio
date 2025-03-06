@@ -23,6 +23,7 @@
       max-width: 1000px;
       margin: 2rem auto;
       padding: 1rem;
+      box-sizing: border-box;
     }
     
     /* Header */
@@ -32,6 +33,7 @@
       text-align: center;
       padding: 3rem 1rem;
       position: relative;
+      box-sizing: border-box;
     }
     header h1 {
       font-size: 3rem;
@@ -48,6 +50,8 @@
       border-radius: 10px;
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
       margin-bottom: 2rem;
+      box-sizing: border-box;
+      text-align: justify;
     }
     .experience h2 {
       color: #1abc9c;
@@ -58,6 +62,7 @@
       margin-bottom: 1.5rem;
       padding-bottom: 1.5rem;
       border-bottom: 1px solid #eee;
+      box-sizing: border-box;
     }
     .experience-item:last-child {
       border-bottom: none;
@@ -83,6 +88,8 @@
       padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      text-align: justify;
     }
     .skills h2 {
       color: #1abc9c;
@@ -110,9 +117,8 @@
     .skill .progress {
       background: #1abc9c;
       height: 100%;
-      width: 0; /* Initial width */
+      width: 0;
       border-radius: 5px;
-      /* Animate to the width specified in --progress */
       animation: grow 2s forwards;
     }
     .skill span {
@@ -133,7 +139,35 @@
       background: #E5FCF5;
       color: black;
       text-align: center;
-      padding: 1rem 0;
+      padding: 1rem;
+      box-sizing: border-box;
+      text-align: justify;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      .experience, .skills {
+        padding: 1rem;
+      }
+      .experience-item h3 {
+        font-size: 1.2rem;
+      }
+      .skill span {
+        font-size: 0.8rem;
+      }
+      .container {
+        width: 100%;
+        padding: 1rem;
+      }
+      footer p {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>

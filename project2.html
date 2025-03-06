@@ -7,21 +7,22 @@
     <link rel="icon" href="favicon.png" type="image/png" />
     <style>
 
-       /* Header */
-    header {
-      background: linear-gradient(135deg, #1abc9c, #16a085);
-      color: #fff;
-      text-align: center;
-      padding: 3rem 1rem;
-      position: relative;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-    }
+      /* Header */
+      header {
+        background: linear-gradient(135deg, #1abc9c, #16a085);
+        color: #fff;
+        text-align: center;
+        padding: 3rem 1rem;
+        position: relative;
+      }
+      header h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+      }
+      header p {
+        font-size: 1.2rem;
+      }
+
       /* Basic Reset and Styling */
       body {
         margin: 0;
@@ -58,8 +59,8 @@
         background: #fff;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        /* Fade-in animation for the container */
         animation: fadeIn 2s ease-out forwards;
+        text-align: left; /* Left-align text content */
       }
 
       @keyframes fadeIn {
@@ -76,7 +77,6 @@
         width: 100%;
         height: auto;
         border-radius: 8px;
-        /* Zoom-in animation for the image */
         animation: zoomIn 1.5s ease-out forwards;
       }
 
@@ -114,8 +114,8 @@
         padding: 20px;
         background: #fff;
         border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        text-align: left;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: justify; /* Justify text content */
         animation: fadeIn 2s ease-out forwards;
       }
 
@@ -132,7 +132,6 @@
 
       .about-info ul {
         margin-top: 20px;
-        text-align: left;
         list-style-type: disc;
         padding-left: 20px;
       }
@@ -143,11 +142,40 @@
       }
 
       footer {
-  background: #E5FCF5;
-  color: black;
-  text-align: center;
-  padding: 1rem 0;
-}
+        background: #E5FCF5;
+        color: black;
+        text-align: center;
+        padding: 1rem 0;
+      }
+
+      @media (max-width: 768px) {
+        .project-container,
+        .about-info {
+          width: 90%;
+          padding: 15px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        header {
+          padding: 2rem 1rem;
+        }
+        header h1 {
+          font-size: 2rem;
+        }
+        header p {
+          font-size: 1rem;
+        }
+        .project-container,
+        .about-info {
+          width: 95%;
+          padding: 10px;
+        }
+        .repo-link {
+          width: 100%;
+          padding: 15px 0;
+        }
+      }
     </style>
   </head>
   <body>
