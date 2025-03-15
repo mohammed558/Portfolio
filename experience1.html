@@ -7,169 +7,8 @@
   
   <!-- AOS Library for Scroll Animations -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="icon" href="favicon.png" type="image/png" />
-  <style>
-  /* Global Styles */
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    line-height: 1.6;
-  }
-  .container {
-    width: 90%;
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
-  
-  /* Header */
-  header {
-    background: linear-gradient(135deg, #1abc9c, #16a085);
-    color: #fff;
-    text-align: center;
-    padding: 3rem 1rem;
-    position: relative;
-    box-sizing: border-box;
-  }
-  header h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
-  header p {
-    font-size: 1.2rem;
-  }
-  
-  /* Experience Section */
-  .experience {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    box-sizing: border-box;
-  }
-  .experience h2 {
-    color: #1abc9c;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  .experience-item {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #eee;
-    text-align: justify;
-    box-sizing: border-box;
-  }
-  .experience-item:last-child {
-    border-bottom: none;
-  }
-  .experience-item h3 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #16a085;
-  }
-  .experience-item span {
-    display: block;
-    font-size: 0.9rem;
-    color: #777;
-    margin-top: 0.2rem;
-  }
-  .experience-item p {
-    margin-top: 0.5rem;
-  }
-  
-  /* Skills Section */
-  .skills {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-    text-align: justify;
-    box-sizing: border-box;
-  }
-  .skills h2 {
-    color: #1abc9c;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  .skill-list {
-    list-style: none;
-    padding: 0;
-  }
-  .skill-list li {
-    margin-bottom: 1rem;
-  }
-  .skill-label {
-    margin-bottom: 0.3rem;
-    font-weight: bold;
-  }
-  .skill {
-    background: #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-    height: 20px;
-  }
-  .skill .progress {
-    background: #1abc9c;
-    height: 100%;
-    width: 0;
-    border-radius: 5px;
-    animation: grow 2s forwards;
-  }
-  .skill span {
-    position: absolute;
-    left: 10px;
-    top: 0;
-    color: #fff;
-    font-size: 0.9rem;
-    line-height: 20px;
-  }
-  @keyframes grow {
-    from { width: 0; }
-    to { width: var(--progress, 100%); }
-  }
-  
-  /* Footer */
-  footer {
-    background: #E5FCF5;
-    color: black;
-    text-align: center;
-    padding: 1rem;
-    text-align: justify;
-    box-sizing: border-box;
-  }
-
-  /* Responsive Styles */
-  @media (max-width: 600px) {
-    header h1 {
-      font-size: 2rem;
-    }
-    header p {
-      font-size: 1rem;
-    }
-    .experience, .skills {
-      padding: 1rem;
-    }
-    .experience-item h3 {
-      font-size: 1.2rem;
-    }
-    .skill span {
-      font-size: 0.8rem;
-    }
-    .container {
-      width: 100%;
-      padding: 1rem;
-    }
-    footer p {
-      font-size: 0.9rem;
-    }
-  }
-</style>  
+  <link rel="icon" href="android-chrome-192x192.png" type="image/png" />
+  <link rel="stylesheet" href="/css/experience.css" />
 </head>
 <body>
   <!-- Page Header -->
@@ -180,7 +19,7 @@
 
   <div class="container">
     <!-- Experience Section -->
-    <section class="experience" data-aos="fade-up">
+    <section class="experience" id="experience" data-aos="fade-up">
       <h2>Professional Experience</h2>
       
       <div class="experience-item" data-aos="fade-right" data-aos-delay="100">
@@ -229,19 +68,28 @@
         </li>
       </ul>
     </section>
-  </div>
+
+    <!-- Back Button -->
+   
+    <div class="back-to-experience" style="text-align: center; margin-top: 2rem;">
+      <a href="index.html#work-experience" id="back-to-work-experience" class="back-button">
+        Back to Work Experience
+      </a>
+    </div>
+  
 
   <footer data-aos="fade-up">
-    <p>&copy; 2025 MOHAMMED. All Rights Reserved. Designed by Mohammed.</p>
+    <p>&copy; 2025 MOHAMMED ARSHAD. All Rights Reserved. Designed by Mohammed Arshad.</p>
   </footer>
   
   <!-- Scripts for AOS Animations -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/experience.js"></script>
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
+    AOS.init({ duration: 1000, once: true });
   </script>
+    
+
+   
 </body>
 </html>

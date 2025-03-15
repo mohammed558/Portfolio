@@ -1,212 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- Viewport meta tag -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.png" type="image/png" />
+<head>
+  <meta charset="UTF-8" />
+  <!-- Viewport Meta Tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+  <link rel="icon" href="android-chrome-192x192.png" type="image/png" />
+  <title>Mohammed Arshad</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Load the custom JavaScript -->
+  <!-- Using "defer" so the script loads after the HTML -->
+  <script src="js/index.js" defer></script>
+  <!-- AOS Library for Scroll Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Fullscreen Intro Section with Animated Background -->
+  <section id="intro" class="fullscreen">
+    <canvas id="bgCanvas"></canvas>
+    <div class="intro-content">
+      <h1 class="animate-slideInLeft" style="animation: slideIn 1.5s ease-out forwards;">
+        Welcome, I'm Mohammed Arshad
+      </h1>
+      <p class="animate-slideUp" style="animation: slideIn 1.5s ease-out forwards;">
+        Java Full Stack Developer
+      </p>
+      <a href="#about" class="scroll-down">Discover More</a>
+    </div>
+  </section>
 
-    <title>Mohammed Arshad</title>
-    
-    <!-- Import the Roboto font from Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- About Me Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <div class="section-content">
+      <p>
+        I am a versatile Full Stack Developer with extensive expertise in both front-end and back-end technologies.
+        I build robust server-side applications using Java and frameworks like Spring Boot to create scalable, secure,
+        and high-performance APIs and microservices. On the front-end, I design dynamic and engaging user experiences 
+        with React and Next.js, leveraging their component-based architecture to ensure fast, responsive, and SEO-friendly 
+        web applications. My skill set extends to crafting semantic HTML and modern CSS layouts, combined with clean 
+        JavaScript to deliver visually compelling and interactive interfaces. Additionally, I have a strong foundation 
+        in database management, utilizing MySQL and MongoDB. This comprehensive skill set allows me to develop end-to-end 
+        digital solutions that are reliable, efficient, and tailored to meet diverse business needs.
+      </p>
+    </div>
+  </section>
 
-    <!-- Link to the external CSS file -->
-    <link rel="stylesheet" href="css/style.css" />
-    
-    <!-- Inline Script to Control Scrolling & Section Visibility -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // Disable scrolling initially
-        document.documentElement.style.overflow = 'hidden';
-        document.body.style.overflow = 'hidden';
+  <!-- Work Experience Section -->
+  <section id="work-experience" class="section">
+    <h2>Work Experience</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <a href="experience1.html">
+          <div class="experience-info">
+            <div class="experience-title">
+              <strong>Full Stack Developer at Housystan</strong>
+            </div>
+            <div class="experience-duration">
+              <small>(Feb 2025 - Present)</small>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="experience2.html">
+          <div class="experience-info">
+            <div class="experience-title">
+              <strong>Full Stack Developer Intern at KodNest Technologies</strong>
+            </div>
+            <div class="experience-duration">
+              <small>(June - December 2024)</small>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="experience3.html">
+          <div class="experience-info">
+            <div class="experience-title">
+              <strong>Internship in Artificial Intelligence and Machine Learning at AiROBOSOFT</strong>
+            </div>
+            <div class="experience-duration">
+              <small>(August - Sept 2023)</small>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 
-        // When the "Discover More" link is clicked:
-        var discoverBtn = document.querySelector('.scroll-down');
-        discoverBtn.addEventListener('click', function(e) {
-          e.preventDefault();
-          // Enable scrolling
-          document.documentElement.style.overflow = 'auto';
-          document.body.style.overflow = 'auto';
-          
-          // Add the "visible" class to all sections (so transitions kick in)
-          document.querySelectorAll('.section').forEach(function(section) {
-            section.classList.add('visible');
-          });
-          
-          // Scroll smoothly to the About section
-          var aboutSection = document.querySelector('#about');
-          if (aboutSection) {
-            aboutSection.scrollIntoView({ behavior: 'smooth' });
-          }
-        });
-      });
-    </script>
-    
-  </head>
-  <body>
-    <!-- Fullscreen Intro Section with Animated Background -->
-    <section id="intro" class="fullscreen">
-      <canvas id="bgCanvas"></canvas>
-      <div class="intro-content">
-        <h1 class="animate-slideInLeft" style="animation: slideIn 1.5s ease-out forwards;">
-          Welcome, I'm Mohammed Arshad
-        </h1>
-        <p class="animate-slideUp" style="animation: slideIn 1.5s ease-out forwards;">
-          Java Full Stack Developer
-        </p>
-        <a href="#about" class="scroll-down">Discover More</a>
-      </div>
-    </section>
-    
-    <!-- About Me Section -->
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <div class="section-content">
-        <p>
-          I am a versatile Full Stack Developer with extensive expertise in both front-end and back-end technologies.
-          I build robust server-side applications using Java and frameworks like Spring Boot to create scalable, secure,
-          and high-performance APIs and microservices. On the front-end, I design dynamic and engaging user experiences
-          with React and Next.js, leveraging their component-based architecture to ensure fast, responsive, and SEO-friendly
-          web applications. My skill set extends to crafting semantic HTML and modern CSS layouts, combined with clean
-          JavaScript to deliver visually compelling and interactive interfaces. Additionally, I have a strong foundation
-          in database management, utilizing MySQL and MongoDB. This comprehensive skill set allows me to develop
-          end-to-end digital solutions that are reliable, efficient, and tailored to meet diverse business needs.
-        </p>
-      </div>
-    </section>
-    
-    <!-- Work Experience Section -->
-    <section id="work-experience" class="section">
-      <h2>Work Experience</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <a href="experience1.html">
-            <div class="experience-info">
-              <div class="experience-title">
-                <strong>Full Stack Developer at Housystan</strong>
-              </div>
-              <div class="experience-duration">
-                <small>(Feb 2025 - Present)</small>
-              </div>
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <a href="project1.html">
+          <div class="project-info">
+            <div class="project-title">
+              <strong>Dynamic Blog Update System with AI Integration</strong>
             </div>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="experience2.html">
-            <div class="experience-info">
-              <div class="experience-title">
-                <strong>Full Stack Developer Intern at KodNest Technologies</strong>
-              </div>
-              <div class="experience-duration">
-                <small>(June - December 2024)</small>
-              </div>
+            <div class="project-duration">
+              <small>(January - February 2025)</small>
             </div>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="experience3.html">
-            <div class="experience-info">
-              <div class="experience-title">
-                <strong>Internship in Artificial Intelligence and Machine Learning at AiROBOSOFT</strong>
-              </div>
-              <div class="experience-duration">
-                <small>(August - Sept 2023)</small>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <a href="project1.html">
-            <div class="project-info">
-              <div class="project-title">
-                <strong>Dynamic Blog Update System with AI Integration</strong>
-              </div>
-              <div class="project-duration">
-                <small>(January - February 2025)</small>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="project2.html">
-            <div class="project-info">
-              <div class="project-title">
-                <strong>The Attendance Management System Using Mobile Biometric Technology</strong>
-              </div>
-              <div class="project-duration">
-                <small>(June 2023 - May 2024)</small>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="project3.html">
-            <div class="project-info">
-              <div class="project-title">
-                <strong>Fast and Fitness Android App</strong>
-              </div>
-              <div class="project-duration">
-                <small>(April - July 2023)</small>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Contact / Social Links Section -->
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <div class="social-links">
-        <a href="https://github.com/mohammed558" target="_blank" aria-label="GitHub">
-          <img src="assets/images/github.png" alt="GitHub Icon" class="social-icon" />
-        </a>
-        <a href="mailto:noorjanmysore842@gmail.com" aria-label="Email">
-          <img src="assets/images/email.png" alt="Email Icon" class="social-icon" />
-        </a>
-        <a href="tel:+919008798120" aria-label="Phone">
-          <img src="assets/images/phone.png" alt="Phone Icon" class="social-icon" />
-        </a>
-        <a href="https://www.hackerrank.com/profile/noorjanmysore842" target="_blank" aria-label="HackerRank">
-          <img src="assets/images/hackerrank.png" alt="HackerRank Icon" class="social-icon" />
-        </a>
-        <a href="https://www.instagram.com/iamm_dexter?igsh=M29naGJva3c1MDJt" target="_blank" aria-label="Instagram">
-          <img src="assets/images/instagram.png" alt="Instagram Icon" class="social-icon" />
-        </a>
-        <a href="https://www.linkedin.com/in/mohammed-arshad-576b15262" target="_blank" aria-label="LinkedIn">
-          <img src="assets/images/linkedin.png" alt="LinkedIn Icon" class="social-icon" />
-        </a>
-        <a href="https://x.com/realdexterrr?t=eEzZM4aCW_vxx2FB_DcQdQ&s=09" target="_blank" aria-label="X (Twitter)">
-          <img src="assets/images/x.png" alt="Twitter Icon" class="social-icon" />
+          </div>
         </a>
       </div>
-    </section>
-    
-    <footer>
-      <p>&copy; 2025 MOHAMMED. All Rights Reserved. Designed by Mohammed.</p>
-    </footer>
-    
-    <!-- External JavaScript Files -->
-    <script src="js/animations.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000,
-        once: true
-      });
-    </script>
-  </body>
+      <div class="project-card">
+        <a href="project2.html">
+          <div class="project-info">
+            <div class="project-title">
+              <strong>The Attendance Management System Using Mobile Biometric Technology</strong>
+            </div>
+            <div class="project-duration">
+              <small>(June 2023 - May 2024)</small>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="project3.html">
+          <div class="project-info">
+            <div class="project-title">
+              <strong>Fast and Fitness Android App</strong>
+            </div>
+            <div class="project-duration">
+              <small>(April - July 2023)</small>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Social Links Section -->
+  <section id="contact" class="section">
+    <h2>Connect Me</h2>
+    <div class="social-links">
+      <a href="https://github.com8" target="_blank" aria-label="GitHub">
+        <img src="assets/images/github.png" alt="GitHub Icon" class="social-icon" />
+      </a>
+      <a href="mailto:noorjaail.com" aria-label="Email">
+        <img src="assets/images/email.png" alt="Email Icon" class="social-icon" />
+      </a>
+      <a href="tel:+91900870000" aria-label="Phone">
+        <img src="assets/images/phone.png" alt="Phone Icon" class="social-icon" />
+      </a>
+      <a href="https://www.hackerrank.ce42" target="_blank" aria-label="HackerRank">
+        <img src="assets/images/hackerrank.png" alt="HackerRank Icon" class="social-icon" />
+      </a>
+      <a href="https://www.instagram.com/DJt" target="_blank" aria-label="Instagram">
+        <img src="assets/images/instagram.png" alt="Instagram Icon" class="social-icon" />
+      </a>
+      <a href="https://www.linkedin.com/in/mo262" target="_blank" aria-label="LinkedIn">
+        <img src="assets/images/linkedin.png" alt="LinkedIn Icon" class="social-icon" />
+      </a>
+      <a href="https://x.com/rerr?t=eEzZM4aCW_vxx2FB_DcQdQ&s=09" target="_blank" aria-label="X (Twitter)">
+        <img src="assets/images/x.png" alt="Twitter Icon" class="social-icon" />
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MOHAMMED. All Rights Reserved. Designed by Mohammed.</p>
+  </footer>
+
+  <!-- External JavaScript Files -->
+  <script src="js/animations.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
 </html>

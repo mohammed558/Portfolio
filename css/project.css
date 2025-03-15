@@ -1,0 +1,189 @@
+/* ----------------------------------------
+   Basic Reset & Typography
+-----------------------------------------*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    text-align: center;
+  }
+  
+  /* ----------------------------------------
+     Header Styling
+  -----------------------------------------*/
+  header {
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+    color: #fff;
+    padding: 3rem 1rem;
+    position: relative;
+  }
+  
+  header h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* ----------------------------------------
+     Project Container & Image
+  -----------------------------------------*/
+  .project-container {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .project-image {
+    width: 80%;   /* Reduced width for a more compact appearance */
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+
+  /* Back Button */
+.back-button {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: #1abc9c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  .back-button:hover {
+    background-color: #16a085;
+    transform: scale(1.1) rotate(5deg);
+  }
+  
+  /* Repository Link Button with Hover Effect */
+  .repo-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #1abc9c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .repo-link:hover {
+    background: #16a085;
+    transform: scale(1.05) rotate(2deg);
+  }
+  
+  /* ----------------------------------------
+     About Information Section
+  -----------------------------------------*/
+  .about-info {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+  }
+  
+  .about-info h3 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .about-info p {
+    line-height: 1.6;
+    color: #555;
+    margin-top: 20px;
+  }
+  
+  .about-info ul {
+    margin-top: 20px;
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .about-info li {
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  /* ----------------------------------------
+     Footer Styling
+  -----------------------------------------*/
+  footer {
+    background: #E5FCF5;
+    color: black;
+    padding: 1rem 0;
+  }
+  
+  /* ----------------------------------------
+     Ball-like Bounce From Top Animation
+  -----------------------------------------*/
+  .bounce-from-top {
+    /* Using a 2-second duration for a visible bounce effect */
+    animation: ballBounce 2s ease-out forwards;
+  }
+  
+  @keyframes ballBounce {
+    0% {
+      transform: translateY(-150vh);
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    70% {
+      /* Bounce upward slightly after impact */
+      transform: translateY(-40px);
+    }
+    80% {
+      /* Overshoot downward */
+      transform: translateY(20px);
+    }
+    90% {
+      /* Smaller bounce upward */
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* ----------------------------------------
+     Responsive Styles
+  -----------------------------------------*/
+  @media (max-width: 768px) {
+    .project-container,
+    .about-info {
+      width: 90%;
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 2rem 1rem;
+    }
+    header h2 {
+      font-size: 2rem;
+    }
+    .project-container,
+    .about-info {
+      width: 95%;
+      padding: 10px;
+    }
+    .repo-link {
+      width: 100%;
+      padding: 15px 0;
+    }
+  }
+  
