@@ -16,15 +16,22 @@ body, html {
 }
 
 /* Fullscreen Intro Section */
+
 .fullscreen {
-  position: relative;
+  position: absolute; /* Fixes the intro in place */
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow: hidden; /* Prevents scrolling inside the intro */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px; /* Add some padding for smaller screens */
+  padding: 10px;
+  background: #FEFFFE;
+  z-index: 1000; /* Ensures it stays above other elements */
 }
+
 #bgCanvas {
   position: absolute;
   top: 0;
@@ -34,12 +41,16 @@ body, html {
   background: #FEFFFE;
   z-index: 1;
 }
+
 .intro-content {
   position: relative;
   z-index: 2;
-  width: 100%; /* Adjust width for smaller screens */
+  width: 80%; /* Adjust for responsiveness */
+  max-width: 600px;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+  left: 450px;
+  top: 300px;
 }
 .intro-content h1 {
   font-size: 2rem; /* Adjust font size for smaller screens */
@@ -165,6 +176,68 @@ body, html {
   padding: 10px; /* Add padding for better readability */
 }
 
+/* Skills Section */
+.skills {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  animation: fadeSlideUp 1s ease forwards;
+}
+.skills:hover {
+  transform: translateY(-10px);
+}
+.skills h2 {
+  color: #1abc9c;
+  margin-bottom: 1rem;
+  text-align: center;
+  animation: fadeIn 1.5s ease forwards;
+}
+.skill-list {
+  list-style: none;
+  padding: 0;
+}
+.skill-list li {
+  margin-top:1rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 1s ease forwards;
+}
+.skill-label {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  animation: fadeIn 1.5s ease forwards;
+}
+.skill {
+  background: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  height: 20px;
+}
+.skill .progress {
+  background: #1abc9c;
+  height: 100%;
+  width: 0;
+  border-radius: 5px;
+  animation: grow 2s forwards;
+}
+.skill:hover {
+  animation: bounce 0.5s ease;
+}
+.skill span {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 20px;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+
 /* Animations */
 @keyframes slideUp {
   from {
@@ -201,8 +274,141 @@ footer {
   padding: 1rem 0;
 }
 
+/* Typing Effect Styles */
+#typing-h1, #typing-p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  color: black;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white; /* Cursor effect */
+  animation: typing 3s steps(30, end), blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: white;
+  }
+}
 
 
+/* Keyframe Animations */
+
+/* Shifting gradient effect for a dynamic header */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header entrance: fades in while sliding and rotating */
+@keyframes headerEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) rotate(-20deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+}
+
+/* Text glow animated effect */
+@keyframes textGlow {
+  0%, 100% { text-shadow: 0 0 10px #1abc9c; }
+  50% { text-shadow: 0 0 20px #16a085; }
+}
+
+/* Simple fade in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Slide up and fade in */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* NEW: Zoom in, zoom out, and then return to normal size and rotation.
+   Adjust the percentages to control the speed and timing of each effect.
+*/
+@keyframes zoomRotate {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0;
+  }
+  30% {
+    transform: scale(1.5) rotate(10deg);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(0.8) rotate(-10deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* A quick bounce effect on hover */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* Grow the progress bar from 0 to the target width */
+@keyframes grow {
+  from { width: 0; }
+  to { width: var(--progress, 100%); }
+}
+
+/* Footer slides in from below */
+@keyframes footerEntrance {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  .experience, .skills {
+    padding: 1rem;
+  }
+  .experience-item h3 {
+    font-size: 1.2rem;
+  }
+  .skill span {
+    font-size: 0.8rem;
+  }
+  .container {
+    width: 100%;
+    padding: 1rem;
+  }
+  footer p {
+    font-size: 0.9rem;
+  }
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
