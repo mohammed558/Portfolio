@@ -16,7 +16,6 @@ body, html {
 }
 
 /* Fullscreen Intro Section */
-
 .fullscreen {
   position: absolute; /* Fixes the intro in place */
   top: 0;
@@ -42,26 +41,31 @@ body, html {
   z-index: 1;
 }
 
+/* Intro Content — Desktop defaults and mobile tweaks provided below */
 .intro-content {
   position: relative;
   z-index: 2;
-  width: 80%; /* Adjust for responsiveness */
+  width: 80%;
   max-width: 600px;
   text-align: center;
   padding: 20px;
+  /* Desktop-specific positioning (feel free to adjust or remove if mobile-first design is preferred) */
   left: 450px;
   top: 300px;
 }
+
 .intro-content h1 {
-  font-size: 2rem; /* Adjust font size for smaller screens */
+  font-size: 2rem; /* Adjust font size for smaller screens if needed */
   margin-bottom: 20px;
   color: #000;
 }
+
 .intro-content p {
-  font-size: 1rem; /* Adjust font size for smaller screens */
+  font-size: 1rem; /* Adjust font size for smaller screens if needed */
   margin-bottom: 30px;
   color: #000;
 }
+
 .scroll-down {
   font-size: 1rem;
   text-decoration: none;
@@ -69,6 +73,7 @@ body, html {
   border-bottom: 1px solid transparent;
   transition: border 0.3s;
 }
+
 .scroll-down:hover {
   border-bottom: 1px solid #000;
 }
@@ -80,6 +85,7 @@ body, html {
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
 /* When visible, sections reveal themselves */
 .section.visible {
   opacity: 1;
@@ -94,6 +100,7 @@ body, html {
   justify-content: center;
   align-items: center;
 }
+
 .project-card {
   background: #E5FCF5;
   padding: 20px;
@@ -102,10 +109,12 @@ body, html {
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
 }
+
 .project-card a {
   color: #000;
   text-decoration: none;
 }
+
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -128,6 +137,7 @@ body, html {
   font-size: 1.1rem;
   color: #000;
 }
+
 .project-duration {
   font-size: 0.9rem;
   color: #000;
@@ -140,6 +150,7 @@ body, html {
   font-size: 1.1rem;
   color: #000;
 }
+
 .experience-duration {
   font-size: 0.9rem;
   color: #000;
@@ -155,14 +166,17 @@ body, html {
   justify-content: center;
   gap: 10px; /* Add gap between icons for spacing */
 }
+
 .social-links a {
   display: inline-block;
   margin: 10px;
   transition: transform 0.3s;
 }
+
 .social-links a:hover {
   transform: scale(1.1);
 }
+
 .social-icon {
   width: 2rem;
   height: 2rem;
@@ -185,31 +199,42 @@ body, html {
   text-align: justify;
   box-sizing: border-box;
   transition: transform 0.3s ease;
-  animation: fadeSlideUp 1s ease forwards;
+  /* Explicitly set the initial state */
+  opacity: 0;
+  transform: translateY(30px);
+  /* Start the animation with a slight delay and ensure the keyframe values apply before and after */
+  animation: fadeSlideUp 1s ease 0.1s both;
+
 }
+
 .skills:hover {
   transform: translateY(-10px);
 }
+
 .skills h2 {
   color: #1abc9c;
   margin-bottom: 1rem;
   text-align: center;
   animation: fadeIn 1.5s ease forwards;
 }
+
 .skill-list {
   list-style: none;
   padding: 0;
 }
+
 .skill-list li {
-  margin-top:1rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   animation: fadeIn 1s ease forwards;
 }
+
 .skill-label {
   margin-bottom: 0.3rem;
   font-weight: bold;
   animation: fadeIn 1.5s ease forwards;
 }
+
 .skill {
   background: #ddd;
   border-radius: 5px;
@@ -217,6 +242,7 @@ body, html {
   position: relative;
   height: 20px;
 }
+
 .skill .progress {
   background: #1abc9c;
   height: 100%;
@@ -224,9 +250,12 @@ body, html {
   border-radius: 5px;
   animation: grow 2s forwards;
 }
+
 .skill:hover {
-  animation: bounce 0.5s ease;
+  transform: translateY(-10px);
+
 }
+
 .skill span {
   position: absolute;
   left: 10px;
@@ -236,7 +265,6 @@ body, html {
   line-height: 20px;
   animation: fadeIn 1.5s ease forwards;
 }
-
 
 /* Animations */
 @keyframes slideUp {
@@ -249,9 +277,11 @@ body, html {
     opacity: 1;
   }
 }
+
 .animate-slideUp {
   animation: slideUp 1s forwards;
 }
+
 @keyframes slideInLeft {
   from {
     opacity: 0;
@@ -262,6 +292,7 @@ body, html {
     transform: translateX(0);
   }
 }
+
 .animate-slideInLeft {
   animation: slideInLeft 1.5s forwards;
 }
@@ -303,7 +334,6 @@ footer {
   }
 }
 
-
 /* Keyframe Animations */
 
 /* Shifting gradient effect for a dynamic header */
@@ -339,13 +369,18 @@ footer {
 
 /* Slide up and fade in */
 @keyframes fadeSlideUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 }
 
-/* NEW: Zoom in, zoom out, and then return to normal size and rotation.
-   Adjust the percentages to control the speed and timing of each effect.
-*/
+/* NEW: Zoom in, zoom out, then return to normal size and rotation */
 @keyframes zoomRotate {
   0% {
     transform: scale(1) rotate(0deg);
@@ -410,8 +445,8 @@ footer {
   }
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+/* Additional Responsive Adjustments */
+@media (  min-width: 600px) and ( max-width: 768px ) {
   section {
     padding: 20px 5%;
   }
@@ -427,4 +462,78 @@ footer {
   .social-skill-card {
     width: 90%;
   }
+  
+  /* Intro Section Adjustments for Mobile */
+  .intro-content {
+    /* Remove fixed position offsets for mobile and let flex centering do the work */
+    left: 0;
+    top: 250px;
+    transform: none;
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .skills {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Adjust the skill progress bar and its label */
+  .skill {
+    position: relative;
+    height: 25px; /* Slightly taller for better readability on mobile */
+  }
+  
+  /* Center the progress label inside bars */
+  .skill span {
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+  }
+  
+  /* Optionally adjust list spacing if needed */
+  .skill-list li {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .skills {
+    text-align: center;
+    padding: 1rem;
+    opacity: 0; /* Ensure it starts hidden */
+    transform: translateY(30px); /* Set initial transform for animation */
+    animation: fadeSlideUpMobile 1.2s ease 0.1s both; /* Mobile-specific animation */
+  }
+
+  @keyframes fadeSlideUpMobile {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .skill {
+    height: 30px; /* Increase height for better visuals on touchscreens */
+    margin-bottom: 1rem; /* Add spacing between skills for readability */
+  }
+
+  .skill span {
+    font-size: 0.9rem; /* Adjust font size for mobile */
+    left: 50%; /* Keep progress labels centered */
+    transform: translateX(-50%);
+  }
+
+  /* Extra safeguard: Trigger reflow on resize */
+  html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling bugs */
+  }
+
+
 }
