@@ -47,7 +47,6 @@ body, html {
   max-width: 600px;
   text-align: center;
   padding: 20px;
-  /* For desktop, use custom offsets if needed */
   left: 450px;
   top: 300px;
 }
@@ -400,32 +399,11 @@ footer {
 }
 
 /* Responsive Styles */
-@media (max-width: 600px) {
-  /* Adjust header sizes if present */
-  header h1 {
-    font-size: 2rem;
-  }
-  header p {
-    font-size: 1rem;
-  }
-  /* Ensure proper padding for sections */
-  .experience, .skills {
-    padding: 1rem;
-  }
-  .experience-item h3 {
-    font-size: 1.2rem;
-  }
 
-  .container {
-    width: 100%;
-    padding: 1rem;
-  }
-  footer p {
-    font-size: 0.9rem;
-  }
-  /* Center and reset the intro-content positioning on mobile */
+/* Mobile Devices (Max width: 600px) */
+@media (max-width: 600px) {
+  /* Reset positioning for the intro content */
   .intro-content {
-    position: relative;
     left: 0;
     top: 0;
     transform: none;
@@ -434,8 +412,28 @@ footer {
     margin: 0 auto;
     padding: 20px;
   }
+  .intro-content h1 {
+    font-size: 1.5rem; /* Reduced font size for mobile */
+  }
+  .intro-content p {
+    font-size: 0.9rem; /* Adjust as needed */
+  }
 }
 
+/* Extra small devices (Max width: 400px) */
+@media (max-width: 400px) {
+  .intro-content {
+    padding: 15px;
+  }
+  .intro-content h1 {
+    font-size: 1.3rem; /* Further reduce font size */
+  }
+  .intro-content p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small to Medium Devices */
 @media (min-width: 601px) and (max-width: 768px) {
   section {
     padding: 20px 5%;
@@ -452,7 +450,7 @@ footer {
   .social-skill-card {
     width: 90%;
   }
-  /* Adjust intro-content for medium devices */
+  /* Adjust intro-content for medium devices if needed */
   .intro-content {
     left: 0;
     top: 100px;
