@@ -291,6 +291,8 @@ footer {
   border-radius: 10px;
   margin: 20px 0;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 10;
 }
 
 .skill-list li {
@@ -413,9 +415,7 @@ footer {
   .experience-item h3 {
     font-size: 1.2rem;
   }
-  .skill span {
-    font-size: 0.8rem;
-  }
+
   .container {
     width: 100%;
     padding: 1rem;
