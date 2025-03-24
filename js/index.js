@@ -85,4 +85,21 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // Repeat typing every 6 seconds
     setInterval(typeText, 6000);
+
+    // Add animation to the Skills Section when it comes into view
+    const skillsSection = document.querySelector(".skills");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            skillsSection.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+  
+    if (skillsSection) {
+      observer.observe(skillsSection);
+    }
   });

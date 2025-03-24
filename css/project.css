@@ -63,22 +63,41 @@ body {
     transform: scale(1.1) rotate(5deg);
   }
   
+
   /* Repository Link Button with Hover Effect */
+.repo-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #1abc9c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  text-align: center;
+}
+
+.repo-link:hover {
+  background: #16a085;
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
   .repo-link {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #1abc9c;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease, transform 0.3s ease;
+    width: 30%;
+    right:50px;
+    margin: 20px auto;
   }
-  
-  .repo-link:hover {
-    background: #16a085;
-    transform: scale(1.05) rotate(2deg);
+}
+
+@media (max-width: 480px) {
+  .repo-link {
+    width: 90%;
+    padding: 15px 0;
+    margin: 20px auto;
   }
+}
   
   /* ----------------------------------------
      About Information Section
